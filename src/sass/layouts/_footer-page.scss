@@ -1,0 +1,94 @@
+.footer {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   background-color: var(--primary-background-color);
+
+   @media screen and (max-width: 1199px) {
+      text-align: center;
+   }
+
+   &__wrap {
+      @include tablet {
+         @include flex(flex, start, baseline);
+         flex-wrap: wrap;
+      }
+   }
+
+   &__logo {
+      display: inline-block;
+      margin-bottom: 20px;
+
+      color: var(--white-color);
+   }
+
+   &__address-wrap {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         width: 50%;
+      }
+
+      @media screen and (max-width: 767px) {
+         margin-bottom: 60px;
+      }
+
+      @include desktop {
+         margin-right: 70px;
+      }
+   }
+
+   &__address {
+      margin-bottom: 9px;
+
+      font-style: normal;
+      line-height: 1.5;
+
+      color: var(--white-color);
+   }
+
+   &__item:not(:last-child) {
+      margin-bottom: 9px;
+   }
+
+   &__link {
+      line-height: 1.5;
+
+      color: var(--address-link-color);
+
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   &__link:hover,
+   &__link:focus {
+      color: var(--accent-text-color);
+   }
+
+   &__join-in {
+      @media screen and (max-width: 767px) {
+         margin-bottom: 60px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         width: 50%;
+      }
+
+      @include desktop {
+         padding-top: 12px;
+         margin-right: auto;
+      }
+   }
+
+   &__join-in-title {
+      margin-bottom: 20px;
+
+      @include font(700, null, 1.14, null);
+      text-transform: uppercase;
+
+      color: var(--white-color);
+   }
+
+   &__sign-up {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         width: 100%;
+         padding-top: 60px;
+      }
+   }
+}

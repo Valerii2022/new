@@ -1,0 +1,103 @@
+.page-header {
+   border-bottom: 1px solid var(--border-line-color);
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      @media screen and (max-width: 767px) {
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+   }
+
+   &__nav-wrap {
+      flex-grow: 1;
+      display: flex;
+      z-index: 1000;
+
+      @media screen and (max-width: 767px) {
+         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+         transform: translateY(-200%);
+         flex-direction: column;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
+         padding: 48px 40px;
+         overflow: scroll;
+
+         background-color: var(--white-color);
+      }
+
+      @include tablet {
+         justify-content: space-between;
+      }
+      &.is-hidden {
+         transform: translateY(0);
+      }
+   }
+
+   &__nav {
+      @media screen and (max-width: 767px) {
+         flex-grow: 1;
+      }
+
+      @include tablet {
+         margin-right: auto;
+      }
+   }
+
+   &__contacts-list {
+      @media screen and (max-width: 767px) {
+         margin-bottom: 64px;
+      }
+   }
+
+   &__logo {
+      color: var(--logo-text-color);
+      align-self: center;
+
+      @include tablet {
+         margin-right: 87px;
+      }
+
+      @include desktop {
+         margin-right: 92px;
+      }
+   }
+
+   &__open-menu,
+   &__close-menu {
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 10px 8px;
+      background-color: transparent;
+      border: none;
+      @include tablet {
+         display: none;
+      }
+   }
+
+   &__open-menu {
+      color: var(--logo-text-color);
+   }
+
+   &__close-menu {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: var(--secondary-text-color);
+   }
+
+   &__close-menu:hover,
+   &__close-menu:focus,
+   &__open-menu:hover,
+   &__open-menu:focus {
+      color: var(--accent-text-color);
+   }
+
+   &__menu-icon {
+      fill: currentColor;
+   }
+}

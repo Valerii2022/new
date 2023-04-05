@@ -1,0 +1,29 @@
+.social-mobile {
+   display: flex;
+   gap: 5px;
+   list-style: none;
+
+   @include tablet {
+      display: none;
+      gap: 10px;
+   }
+
+   &__item:not(:last-child) {
+      padding-right: 5px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+      @include mobile {
+         padding-right: 5px;
+      }
+   }
+
+   &__link {
+      @include font(500, 12px, 1.22, 0.02em);
+
+      color: var(--accent-text-color);
+
+      @include mobile {
+         font-size: 18px;
+      }
+   }
+}

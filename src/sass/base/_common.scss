@@ -1,1 +1,11 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+   font-family: "Roboto", sans-serif;
+   @include font(null, 14px, null, 0.03em);
+
+   color: var(--primary-text-color);
+   background-color: var(--white-color);
+
+   &.no-scroll {
+      overflow: hidden;
+   }
+}

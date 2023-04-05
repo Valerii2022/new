@@ -1,0 +1,65 @@
+.hero {
+   padding-top: 118px;
+   padding-bottom: 118px;
+   max-width: 480px;
+   @extend %margin-auto;
+
+   background-color: var(--bg-color);
+   background-image: var(--hero-linear-gradient), url(../images/hero-480.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   @include retina {
+      background-image: var(--hero-linear-gradient), url(../images/hero-480@2x.jpg);
+   }
+
+   @include tablet {
+      max-width: 768px;
+      background-image: var(--hero-linear-gradient), url(../images/hero-768.jpg);
+      @include retina {
+         background-image: var(--hero-linear-gradient), url(../images/hero-768@2x.jpg);
+      }
+   }
+
+   @include desktop {
+      max-width: 1600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-image: var(--hero-linear-gradient), url(../images/hero-1200.jpg);
+      @include retina {
+         background-image: var(--hero-linear-gradient), url(../images/hero-1200@2x.jpg);
+      }
+   }
+
+   &__title {
+      max-width: 360px;
+      margin-bottom: 30px;
+      @extend %margin-auto;
+
+      @include font(900, 26px, 1.62, 0.06em);
+      text-align: center;
+      text-transform: uppercase;
+
+      color: var(--white-color);
+
+      @include desktop {
+         font-size: 44px;
+         line-height: 1.36;
+         max-width: 696px;
+      }
+   }
+
+   &__btn {
+      display: block;
+      @extend %margin-auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      @include desktop {
+         padding-left: 32px;
+         padding-right: 32px;
+      }
+   }
+}

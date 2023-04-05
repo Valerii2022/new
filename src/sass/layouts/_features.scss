@@ -1,0 +1,51 @@
+.features {
+   &__list {
+      @include tablet {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 30px;
+      }
+   }
+
+   &__thumb {
+      height: 120px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      @include flex(flex, center, center);
+
+      background: var(--secondary-background-color);
+   }
+
+   &__item {
+      @include tablet {
+         width: calc((100% - 30px) / 2);
+      }
+
+      @include desktop {
+         width: calc((100% - 90px) / 4);
+      }
+   }
+
+   &__item:not(:last-child) {
+      @media screen and (max-width: 767px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 10px;
+
+      @include font(700, 14px, 1.14, null);
+      text-transform: uppercase;
+
+      color: var(--secondary-text-color);
+
+      @media screen and (max-width: 767px) {
+         text-align: center;
+      }
+   }
+
+   &__subtitle {
+      line-height: 1.71;
+   }
+}
