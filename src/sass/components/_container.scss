@@ -1,0 +1,12 @@
+.container {
+   @extend %margin-auto;
+
+   @include mobile {
+   }
+
+   @include tablet {
+   }
+
+   @include desktop {
+   }
+}
