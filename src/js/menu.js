@@ -1,4 +1,4 @@
-import refs from './refs';
+import {refs} from './refs';
 
 (() => {
   refs.openMenuBtn.addEventListener('click', toggleMenu);
