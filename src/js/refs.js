@@ -7,4 +7,6 @@ export const refs = {
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
+  submitBtn: document.querySelector('[data-submit]'),
+  form: document.querySelector('.modal-form'),
 };
