@@ -9,4 +9,6 @@ export const refs = {
   modal: document.querySelector('[data-modal]'),
   submitBtn: document.querySelector('[data-submit]'),
   form: document.querySelector('.modal-form'),
+  checkbox: document.querySelector('.modal-form__checkbox'),
+  checkboxIcon: document.querySelector('.modal-form__checkbox-icon'),
 };
