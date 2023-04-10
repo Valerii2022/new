@@ -11,4 +11,10 @@ export const refs = {
   form: document.querySelector('.modal-form'),
   checkbox: document.querySelector('.modal-form__checkbox'),
   checkboxIcon: document.querySelector('.modal-form__checkbox-icon'),
+  filter: document.querySelector('[data-filter]'),
+  filterAll: document.querySelector('[data-filter-all]'),
+  filterWeb: document.querySelector('[data-filter-web]'),
+  filterApp: document.querySelector('[data-filter-app]'),
+  filterDesign: document.querySelector('[data-filter-design]'),
+  filterMarketing: document.querySelector('[data-filter-marketing]'),
 };

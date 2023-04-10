@@ -76,8 +76,10 @@ function addInfoToLocalStorage() {
 
 function addValuesFromLocaleStorage() {
   const user = JSON.parse(localStorage.getItem('user'));
-  refs.form[0].value = user.name;
-  refs.form[1].value = user.phone;
-  refs.form[2].value = user.email;
-  refs.form[3].value = user.feedback;
+  if (user !== null) {
+    refs.form[0].value = user.name;
+    refs.form[1].value = user.phone;
+    refs.form[2].value = user.email;
+    refs.form[3].value = user.feedback;
+  }
 }

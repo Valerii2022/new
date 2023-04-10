@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./js/menu.js"></script>
+    <script type="module" src="./js/portfolio.js"></script>
   </head>
 
   <body>
@@ -115,9 +115,9 @@
       <section class="section portfolio">
         <div class="container">
           <h1 class="section__title hidden">Портфоліо</h1>
-          <form class="filter-form">
+          <form class="filter-form" data-filter>
             <ul class="filter-form__list portfolio__filter list">
-              <li class="filter-form__item">
+              <li class="filter-form__item" data-filter-all>
                 <input
                   class="filter-form__input hidden"
                   type="radio"
@@ -127,7 +127,7 @@
                 />
                 <label class="filter-form__label" for="all">Усі</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item" data-filter-web>
                 <input
                   class="filter-form__input hidden"
                   type="radio"
@@ -136,7 +136,7 @@
                 />
                 <label class="filter-form__label" for="web">Веб-сайти</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item" data-filter-app>
                 <input
                   class="filter-form__input hidden"
                   type="radio"
@@ -145,7 +145,7 @@
                 />
                 <label class="filter-form__label" for="app">Додатки</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item" data-filter-design>
                 <input
                   class="filter-form__input hidden"
                   type="radio"
@@ -154,7 +154,7 @@
                 />
                 <label class="filter-form__label" for="design">Дизайн</label>
               </li>
-              <li class="filter-form__item">
+              <li class="filter-form__item" data-filter-marketing>
                 <input
                   class="filter-form__input hidden"
                   type="radio"

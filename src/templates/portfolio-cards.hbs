@@ -1,0 +1,47 @@
+{{#each this}}
+  <li class='portfolio-list__item'>
+    <a href='#' class='portfolio-list__link link'>
+      <div class='portfolio-list__img-thumb'>
+        <picture>
+          <source
+            srcset='
+                        ./images/portfolio-1.jpg    1x,
+                        ./images/portfolio-1@2x.jpg 2x
+                      '
+            media='(min-width: 1200px)'
+          />
+          <source
+            srcset='
+                        ./images/portfolio-1-tab.jpg    1x,
+                        ./images/portfolio-1-tab@2x.jpg 2x
+                      '
+            media='(min-width: 768px)'
+          />
+          <source
+            srcset='
+                        ./images/portfolio-1-mob.jpg    1x,
+                        ./images/portfolio-1-mob@2x.jpg 2x
+                      '
+            media='(max-width: 767px)'
+          />
+          <img
+            class='portfolio-list__img'
+            src='./images/portfolio-1.jpg'
+            alt='Монітор з інформаційними картками'
+            width='450'
+            height='294'
+          />
+        </picture>
+        <p class='portfolio-list__text'>
+          Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+          сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+          компанію чи приватну особу.
+        </p>
+      </div>
+      <div class='portfolio-list__title-thumb'>
+        <h2 class='portfolio-list__title'>Технокряк</h2>
+        <p class='portfolio-list__subtitle'>Веб-сайт</p>
+      </div>
+    </a>
+  </li>
+{{/each}}
